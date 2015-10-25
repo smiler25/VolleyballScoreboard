@@ -17,7 +17,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -91,9 +90,9 @@ public class MainActivity extends AppCompatActivity
         hNameView = (TextView) findViewById(R.id.homeNameView);
         gNameView = (TextView) findViewById(R.id.guestNameView);
         periodView = (TextView) findViewById(R.id.periodView);
-        ImageView whistleView = (ImageView) findViewById(R.id.whistleView);
-        ImageView startTimeoutView = (ImageView) findViewById(R.id.timeoutView);
-        ImageView startCameraView = (ImageView) findViewById(R.id.cameraView);
+//        ImageView whistleView = (ImageView) findViewById(R.id.whistleView);
+//        ImageView startTimeoutView = (ImageView) findViewById(R.id.timeoutView);
+//        ImageView startCameraView = (ImageView) findViewById(R.id.cameraView);
 //        TextView homeScoreMinus1 = (TextView) findViewById(R.id.minus1HomeView);
 //        TextView guestScoreMinus1 = (TextView) findViewById(R.id.minus1GuestView);
 
@@ -101,9 +100,9 @@ public class MainActivity extends AppCompatActivity
         gScoreView.setOnClickListener(this);
         periodView.setOnClickListener(this);
 
-        whistleView.setOnClickListener(this);
-        startTimeoutView.setOnClickListener(this);
-        startCameraView.setOnClickListener(this);
+//        whistleView.setOnClickListener(this);
+//        startTimeoutView.setOnClickListener(this);
+//        startCameraView.setOnClickListener(this);
 
         hScoreView.setOnLongClickListener(this);
         gScoreView.setOnLongClickListener(this);
@@ -200,18 +199,20 @@ public class MainActivity extends AppCompatActivity
             case R.id.periodView:
                 newPeriod(true);
                 break;
-            case R.id.whistleView:
+/*            case R.id.whistleView:
                 playWhistle();
                 break;
             case R.id.hornView:
                 playHorn();
                 break;
+
             case R.id.timeoutView:
 //                showListDialog("timeout");
                 break;
             case R.id.newPeriodIconView:
 //                showListDialog("new_period");
                 break;
+*/
 /*
             case R.id.homeTimeoutsView:
                 timeout(0);

@@ -20,8 +20,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_height="wrap_content"
         android:gravity="center">
 
         <TextView
@@ -33,11 +32,59 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="@dimen/team_name_font_size" />
 
-        <com.smiler.volleyball_scoreboard.elements.CustomFontTextView
-            android:id="@+id/periodView"
-            style="@style/bottomLineStyle"
-            android:text="@string/one_zero"
-            />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="0dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/elements_backgound">
+
+                <ImageView
+                    android:id="@+id/whistleView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:contentDescription="@string/description_whistle"
+                    android:src="@drawable/ic_whistle" />
+
+                <ImageView
+                    android:id="@+id/cameraView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/description_start_camera"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_action_dock" />
+
+                <ImageView
+                    android:id="@+id/timeoutView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/label_timeouts"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_timeout" />
+            </LinearLayout>
+
+            <com.smiler.volleyball_scoreboard.elements.CustomFontTextView
+                android:id="@+id/periodView"
+                style="@style/bottomLineStyle"
+                android:text="@string/one_zero"
+                android:layout_gravity="center"/>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/guestNameView"
@@ -53,7 +100,6 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
         android:gravity="center">
 
         <com.smiler.volleyball_scoreboard.elements.CustomFontTextView
@@ -62,44 +108,10 @@
             android:text="@string/two_zeros"
             />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            style="@style/matchParentCenter"
-            android:layout_gravity="bottom">
-
-            <ImageView
-                android:id="@+id/whistleView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="center"
-                android:contentDescription="@string/description_whistle"
-                android:src="@drawable/ic_whistle" />
-
-
-            <ImageView
-                android:id="@+id/cameraView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/description_start_camera"
-                android:scaleType="center"
-                android:src="@drawable/ic_action_dock" />
-
-            <ImageView
-                android:id="@+id/timeoutView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/label_timeouts"
-                android:scaleType="center"
-                android:src="@drawable/ic_timeout" />
-        </LinearLayout>
-
-
-<!--
         <Space
-            android:layout_width="100dp"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
             />
--->
 
         <com.smiler.volleyball_scoreboard.elements.CustomFontTextView
             android:id="@+id/guestScoreView"
@@ -109,10 +121,7 @@
 
     </LinearLayout>
 
-    <ViewStub
-        android:id="@+id/layout_stub"
-        android:inflatedId="@+id/full_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+
+
+
 </LinearLayout>
